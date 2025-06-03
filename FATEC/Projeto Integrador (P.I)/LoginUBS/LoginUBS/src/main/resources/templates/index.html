@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBS - Acesso ao Sistema</title>
+    <link rel="icon" href="./Images/UBS.ico" type="image/x-icon">
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f5f9; /* Fundo mais claro e azulado */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 83, 156, 0.1);
+            overflow: hidden;
+            width: 400px;
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-header {
+            background: linear-gradient(135deg, #005C98, #007BBF); /* Tons de azul do SUS */
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .login-header h2 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .login-header p {
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .login-form {
+            padding: 40px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #333;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            outline: none;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #666;
+            pointer-events: none;
+            transition: 0.3s ease all;
+        }
+
+        .input-group input:focus ~ label,
+        .input-group input:valid ~ label {
+            top: -20px;
+            font-size: 12px;
+            color: #007BBF; /* Cor azul do SUS */
+        }
+
+        .input-group .highlight {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background: #007BBF; /* Cor azul do SUS */
+            transition: 0.3s ease all;
+        }
+
+        .input-group input:focus ~ .highlight {
+            width: 100%;
+        }
+
+        .login-button {
+            background: linear-gradient(135deg, #005C98, #007BBF); /* Tons de azul do SUS */
+            color: white;
+            border: none;
+            padding: 15px 0;
+            border-radius: 8px; /* Bordas menos arredondadas, mais institucional */
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 80%;
+            margin: 30px auto 0;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .login-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 123, 191, 0.3);
+            background: linear-gradient(135deg, #007BBF, #00A1DE); /* Cor mais clara ao passar o mouse */
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .forgot-password a {
+            color: #005C98; /* Azul do SUS */
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .forgot-password a:hover {
+            color: #00A1DE;
+        }
+
+        .error-message {
+            color: #ff0000;
+            padding-top: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Inicio do formulário de login -->
+    
+    <div class="login-container">
+        <div class="login-header">
+            <h2>UBS Virtual</h2>
+            <p>Sistema de Atendimento da Unidade Básica de Saúde</p>
+        </div>
+
+   
+    <div class="error-message">
+      
+    </div>
+
+        
+                <form method="post" action="" class="login-form" id="login-form">
+                    
+                    <div class="error-messages">
+                
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" name="email" placeholder="Digite seu E-mail" id="email">
+                        <span class="highlight"></span>
+                        <label for="email">E-mail</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" name="senha" id="password" placeholder="Digite a senha">
+                        <span class="highlight"></span>
+                        <label for="password">Senha</label>
+                    </div>
+                        <a href="main.html" class="login-button">Acessar Sistema</a>
+                    <div class="forgot-password">
+                        <a href="./enviarcodigo.html">Esqueceu a senha?</a>
+                    </div>
+                </form>
+    </div>    
+    <!-- Fim do formulário de login -->
+
+</body>
+
+</html>
