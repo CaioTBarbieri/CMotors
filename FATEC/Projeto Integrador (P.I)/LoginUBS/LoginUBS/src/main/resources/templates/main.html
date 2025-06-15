@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,6 +85,67 @@
     <header>
         <h1>UBS - Sistema de Atendimento</h1>
         <p>Unidade Básica de Saúde</p>
+        <div style="position: absolute; top: 20px; right: 30px;">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Olá, <span th:text="${nome}">Usuário</span> &#x25BC;
+                </button>
+                <div class="dropdown-content">
+                    <a href="/sair" class="logout-btn">Sair</a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropbtn {
+                background: #005C98;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 8px;
+                font-weight: 600;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .dropbtn:hover, .dropbtn:focus {
+                background: #007BBF;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                right: 0;
+                background-color: #fff;
+                min-width: 120px;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                z-index: 1;
+                border-radius: 8px;
+            }
+            .dropdown-content .logout-btn {
+        display: block;
+        background: none;
+        color: #ff4d4d;
+        border: none;
+        padding: 12px 16px;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s;
+    }
+    .dropdown-content .logout-btn:hover {
+        background: #ffeaea;
+    }
+            .dropdown:hover .dropdown-content,
+            .dropdown:focus-within .dropdown-content {
+                display: block;
+            }
+        </style>
     </header>
 
     <div class="container">

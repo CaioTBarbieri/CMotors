@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CMotors</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h1>CMotors</h1>
+    <h2>Login</h2>
+    <form action="/logar" method="post">
+        <input type="text" name="email" placeholder="E-mail" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+    <div th:if="${erro != null}" th:text="${erro}" class="alert alert-danger" role="alert"></div>
+    <p>Não tem uma conta? <a href="/cadastro">Cadastre-se</a></p>
+</div>
+
+</body>
+</html>
